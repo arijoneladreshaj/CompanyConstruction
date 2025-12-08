@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up - PrimeConstruct</title>
+</head>
+<body>
+  <div class="login-center">
+
+    <div class="login-header">
+      <h1 class="brand-title">PrimeConstruct</h1>
+     
+      <p class="brand-quote">“Nga koncepti deri te krijimi – ne ndërtojmë të ardhmen.”</p>
+    </div>
+
+  <h2>Regjistrohu!</h2>
+
+  <form>
+    <label>Emri i plotë:<br>
+      <input type="text" name="fullname" required>
+    </label>
+    <br><br>
+
+    <label>Username:<br>
+      <input type="text" name="username" required>
+    </label>
+    <br><br>
+
+    <label>Email:<br>
+      <input type="email" name="email" required>
+    </label>
+    <br><br>
+
+    <label>Telefoni (opsional):<br>
+      <input type="tel" name="phone">
+    </label>
+    <br><br>
+
+    <label>Data e lindjes:<br>
+      <input type="date" name="dob" required>
+    </label>
+    <br><br>
+
+    <label>Fjalëkalimi:<br>
+      <input type="password" name="password" required>
+    </label>
+    <br><br>
+
+    <label>Konfirmo fjalëkalimin:<br>
+      <input type="password" name="confirmPassword" required>
+    </label>
+    <br><br>
+
+    <label>Gjinia:<br>
+      <input type="radio" name="gender" value="female"> Femër
+      <input type="radio" name="gender" value="male"> Mashkull
+      
+    </label>
+    <br><br>
+
+    <label>Vendi:<br>
+      <select name="country">
+        <option value="">Zgjidh vendin</option>
+        <option value="AL">Shqipëri</option>
+        <option value="XK">Kosovë</option>
+        <option value="MK">Maqedoni</option>
+        <option value="TR">Turqi</option>
+        <option value="OTHER">Tjetër</option>
+      </select>
+    </label>
+    <br><br>
+
+    <label>
+      <input type="checkbox" name="terms" required>
+      Pranoj kushtet dhe politikën e privatësisë
+    </label>
+    <br><br>
+
+    <button type="submit">Krijo llogari</button>
+    <p>Ke llogari? <a href="login.html">Hyr këtu</a></p>
+
+
+  </form>
+</body>
+</html>
