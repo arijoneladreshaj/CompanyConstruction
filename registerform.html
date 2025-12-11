@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="sq">
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="registerform.css">
+  
   <title>Sign up - PrimeConstruct</title>
 </head>
 <body>
@@ -16,50 +18,49 @@
 
   <h2>Regjistrohu!</h2>
 
-  <form>
-    <label>Emri i plotë:<br>
-      <input type="text" name="fullname" required>
-    </label>
-    <br><br>
+  <form class="form-grid">
+  <div class="form-group">
+    <label>Emri i plotë:</label>
+    <input type="text" name="fullname" required>
+  </div>
 
-    <label>Username:<br>
+<div class="form-group">
+    <label>Username:</label>
       <input type="text" name="username" required>
-    </label>
-    <br><br>
-
-    <label>Email:<br>
+    </div>
+<div class="form-group">
+    <label>Email:</label>
       <input type="email" name="email" required>
-    </label>
-    <br><br>
-
-    <label>Telefoni (opsional):<br>
+</div>
+<div class="form-group">
+    <label>Telefoni (opsional):</label>
       <input type="tel" name="phone">
-    </label>
-    <br><br>
-
-    <label>Data e lindjes:<br>
+    
+</div>
+<div class="form-group">
+    <label>Data e lindjes:</label>
       <input type="date" name="dob" required>
-    </label>
-    <br><br>
-
-    <label>Fjalëkalimi:<br>
+</div>
+<div class="form-group">
+    <label>Fjalëkalimi:</label>
       <input type="password" name="password" required>
-    </label>
-    <br><br>
-
-    <label>Konfirmo fjalëkalimin:<br>
+</div>
+<div class="form-group">
+    <label>Konfirmo fjalëkalimin:</label>
       <input type="password" name="confirmPassword" required>
-    </label>
-    <br><br>
+</div>
 
-    <label>Gjinia:<br>
-      <input type="radio" name="gender" value="female"> Femër
-      <input type="radio" name="gender" value="male"> Mashkull
-      
-    </label>
-    <br><br>
+    <div class="form-group">
+  <label>Gjinia:</label>
+  <div class="radio-group">
+    <label><input type="radio" name="gender" value="female"> Femër</label>
+    <label><input type="radio" name="gender" value="male"> Mashkull</label>
+  </div>
+</div>
 
-    <label>Vendi:<br>
+    
+<div class="form-group">
+    <label>Vendi:</label>
       <select name="country">
         <option value="">Zgjidh vendin</option>
         <option value="AL">Shqipëri</option>
@@ -68,19 +69,22 @@
         <option value="TR">Turqi</option>
         <option value="OTHER">Tjetër</option>
       </select>
-    </label>
-    <br><br>
-
+</div>
+<div class="full-row">
     <label>
       <input type="checkbox" name="terms" required>
       Pranoj kushtet dhe politikën e privatësisë
     </label>
-    <br><br>
+</div>
 
-    <button type="submit">Krijo llogari</button>
-    <p>Ke llogari? <a href="login.html">Hyr këtu</a></p>
+    <div class="full-row">
+  <button type="submit">Krijo llogari</button>
+</div>
+
+<p class="full-row">Ke llogari? <a href="login.html">Hyr këtu</a></p>
 
 
   </form>
+  </div>
 </body>
 </html>
