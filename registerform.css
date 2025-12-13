@@ -1,0 +1,127 @@
+body {
+    background: #0c0c0e;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.login-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.brand-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fefce8;
+    text-shadow: 0 0 18px rgba(250, 204, 21, 0.55);
+    margin-bottom: 0.2rem;
+}
+
+.brand-quote {
+    font-style: italic;
+    font-size: 1rem;
+    color: #facc15;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+
+.form-grid {
+    background: rgba(20, 20, 25, 0.85);
+    padding: 3rem ;
+    border-radius: 26px;
+    border: 1px solid rgba(250, 204, 21, 0.25);
+    box-shadow: 
+        0 0 20px rgba(250, 204, 21, 0.12),
+        0 0 60px rgba(250, 204, 21, 0.05);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 3rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-row {
+    grid-column: span 2;
+}
+
+form label {
+    color: #d3d3d3;
+    font-size: 0.9rem;
+    text-align: left;
+    display: block;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 5px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: #0f0f11;
+    color: white;
+    box-sizing: border-box;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+}
+
+form input[type="checkbox"], form input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 1.1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #fbbf24, #facc15);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.45),
+                0 0 40px rgba(251, 191, 36, 0.25);
+    transition: 0.25s ease-in-out;
+}
+
+form button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(251, 191, 36, 0.55),
+                0 0 60px rgba(251, 191, 36, 0.4);
+}
+
+form p a {
+    color: #facc15;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-row {
+        grid-column: span 1;
+    }
+}
+
