@@ -114,6 +114,12 @@ form p a {
 form p a:hover {
     text-decoration: underline;
 }
+form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);; 
+     font-size: 0.8rem;
+    opacity: 1;    
+}
+
 
 
 @media (max-width: 600px) {
