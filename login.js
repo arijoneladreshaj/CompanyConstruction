@@ -1,57 +1,69 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("loginForm");
-  if (!form) return;
+document.addEventListener("DOMContentLoaded", function () {
 
-  function errorElFor(el) {
-    const group = el.closest(".form-group") || el.parentElement;
-    return group ? group.querySelector(".error-text") : null;
-  }
-  function setError(el, msg) {
-    const e = errorElFor(el);
-    if (e) e.textContent = msg;
-    el.classList.add("input-error");
-  }
-  function clearError(el) {
-    const e = errorElFor(el);
-    if (e) e.textContent = "";
-    el.classList.remove("input-error");
+  const form = document.querySelector(".login-form");
+
+  function showError(input, message) {
+    removeError(input);
+
+    const error = document.createElement("p");
+    error.className = "inline-error";
+    error.textContent = message;
+
+    error.style.color = "red";
+    error.style.fontSize = "13px";
+    error.style.marginTop = "6px";
+
+    input.style.borderColor = "red";
+    input.parentNode.appendChild(error);
   }
 
-  form.addEventListener("submit", (e) => {
+  function removeError(input) {
+    const error = input.parentNode.querySelector(".inline-error");
+    if (error) error.remove();
+    input.style.borderColor = "#ccc";
+  }
+
+  const emailRegex = /^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  const passwordRegex =
+    /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
+    let isValid = true;
 
-    const identifier = form.elements.identifier.value.trim();
-    const password = form.elements.password.value;
-
-    clearError(form.elements.identifier);
-    clearError(form.elements.password);
-
-    if (!identifier) return setError(form.elements.identifier, "Shkruaj emailin ose username.");
-    if (!password) return setError(form.elements.password, "Shkruaj fjalëkalimin.");
-
-    const saved = localStorage.getItem("primeconstruct_user");
-    if (!saved) {
-      setError(form.elements.identifier, "Nuk ka llogari të regjistruar. Regjistrohu fillimisht.");
-      return;
-    }
-
-    const user = JSON.parse(saved);
-
-    const idOk = (identifier === user.email) || (identifier === user.username);
-    const pwOk = (password === user.password);
-
-    if (!idOk) return setError(form.elements.identifier, "Email/Username i gabuar.");
-    if (!pwOk) return setError(form.elements.password, "Fjalëkalimi i gabuar.");
+    const email = form.elements[0]; 
+    const password = form.elements[1];
 
     
-    localStorage.setItem("primeconstruct_session", JSON.stringify({
-      loggedIn: true,
-      username: user.username,
-      email: user.email,
-      time: Date.now()
-    }));
+    if (!emailRegex.test(email.value)) {
+      showError(email, "Email ose username i pavlefshëm.");
+      isValid = false;
+    } else {
+      removeError(email);
+    }
 
-    alert("U kyqe me sukses!");
-    window.location.href = "projects.html";
+   
+    if (!passwordRegex.test(password.value)) {
+      showError(
+        password,
+        "Fjalëkalimi duhet të ketë min. 8 karaktere, 1 shkronjë të madhe, 1 të vogël, 1 numër dhe 1 simbol."
+      );
+      isValid = false;
+    } else {
+      removeError(password);
+    }
+
+    
+    if (isValid) {
+      window.location.href = "projects.html";
+    }
   });
+
+  
+  Array.from(form.elements).forEach(el => {
+    if (el.tagName === "INPUT") {
+      el.addEventListener("input", () => removeError(el));
+    }
+  });
+
 });
