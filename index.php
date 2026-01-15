@@ -32,9 +32,9 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="team.html">Team</a>
+            <a href="team.php">Team</a>
             <a href="#contact">Contact</a>
-            <a href="projects.html">Projects</a>
+            <a href="projects.php">Projects</a>
           </nav>
         </div>
       </header>
@@ -55,7 +55,7 @@
     <strong>ju lutem kyçuni në llogarinë tuaj.</strong>
   </p>
   <div class="access-buttons">
-  <a href="login.html" class="btn-access-yellow">Kyçu për të vazhduar</a>
+  <a href="login.php" class="btn-access-yellow">Kyçu për të vazhduar</a>
   <a href="#reviews" class="btn-access-black">Reviews</a>
 </div>
    </div>

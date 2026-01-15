@@ -82,7 +82,7 @@
   <button type="submit">Krijo llogari</button>
 </div>
 
-<p class="full-row">Ke llogari? <a href="login.html">Hyr këtu</a></p>
+<p class="full-row">Ke llogari? <a href="login.php">Hyr këtu</a></p>
 
 
   </form>

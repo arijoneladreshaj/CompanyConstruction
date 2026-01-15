@@ -20,12 +20,12 @@
     </a>
 
     <nav class="main-nav">
-      <a href="index.html#home">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#services">Services</a>
-      <a href="team.html">Team</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="projects.html">Projects</a>
+      <a href="index.php#home">Home</a>
+      <a href="index.php#about">About</a>
+      <a href="index.php#services">Services</a>
+      <a href="team.php">Team</a>
+      <a href="index.php#contact">Contact</a>
+      <a href="projects.php">Projects</a>
     </nav>
   </div>
 </header>

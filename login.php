@@ -37,7 +37,7 @@
         <button type="submit" class="login-btn">Kyçu</button>
 
         <p class="forgot"><a href="#">Ke harruar fjalëkalimin?</a></p>
-        <p class="register-text">Nuk ke llogari? <a href="registerform.html">Krijo një të re</a></p>
+        <p class="register-text">Nuk ke llogari? <a href="registerform.php">Krijo një të re</a></p>
 
       </form>
     </div>
