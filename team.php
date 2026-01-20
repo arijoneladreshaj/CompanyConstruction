@@ -23,7 +23,6 @@
       <a href="index.php#home">Home</a>
       <a href="index.php#about">About</a>
       <a href="index.php#services">Services</a>
-      <a href="team.php">Team</a>
       <a href="index.php#contact">Contact</a>
       <a href="projects.php">Projects</a>
     </nav>
@@ -47,7 +46,7 @@
 
       <div class="search-chip">
         <div class="search-label">Eksperienca</div>
-        <div class="search-value">3–15+ vite</div>
+        <div class="search-value">15+ vite</div>
       </div>
 
       <div class="search">
@@ -175,22 +174,33 @@
 
 
 
-
-<section class="bottom-strip">
-  <div class="container bottom-inner">
-    <div class="bottom-contact">
-      <span>Tel: +383 XX XXX XXX</span>
-      <span>Email: info@primeconstruct.com</span>
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>Ready to start your project?</h2>
+      <p>Contact us today and let’s build something great together.</p>
+      <a href="contact.html" class="cta-btn">Get in Touch</a>
     </div>
-  </div>
-</section>
+  </section>
+
+ 
+   <section class="bottom-strip" id="contact">
+    <div class="container bottom-inner">
+     
+  
+      <div class="bottom-contact">
+        <span>Tel: +383 XX XXX XXX</span>
+        <span>Email: info@primeconstruct.com</span>
+      </div>
+    </div>
+  </section>
 
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <span>© PrimeConstruct - All rights reserved</span>
-  </div>
-</footer>
-
+ 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© PrimeConstruct - All rights reserved</span>
+    
+    </div>
+  </footer>
 </body>
 </html>

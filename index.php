@@ -30,10 +30,9 @@
 
           <nav class="main-nav">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="about.php">About</a>
             <a href="#services">Services</a>
-            <a href="team.php">Team</a>
-            <a href="#contact">Contact</a>
+            <a href="contact.php">Contact</a>
             <a href="projects.php">Projects</a>
           </nav>
         </div>
@@ -191,30 +190,18 @@
         </div>
     </section>
  
-  <section class="about-block" id="about">
-    <div class="container about-inner">
-      <div class="about-image">
-       
-        <img src="team.jpg" alt="PrimeConstruct" />
-      </div>
-      <div class="about-text">
-        <p class="since-label">Since 2014</p>
-        <h2>Our goal then and now is to provide quality, on-time projects.</h2>
-        <p>
-          Me një ekip inxhinierësh dhe arkitektësh me përvojë, PrimeConstruct
-          merret me projekte banimi, komerciale dhe industriale. Planifikimi i
-          kujdesshëm dhe menaxhimi i kantierit sigurojnë që çdo objekt të
-          dorëzohet në kohë dhe sipas standardeve.
-        </p>
-        <p>
-          Ne besojmë në komunikim të hapur me investitorët, dokumentacion të
-          qartë teknik dhe respektim të rreptë të parametrave të sigurisë.
-        </p>
-      </div>
+  
+
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>Ready to start your project?</h2>
+      <p>Contact us today and let’s build something great together.</p>
+      <a href="contact.php" class="cta-btn">Get in Touch</a>
     </div>
   </section>
 
-  <section class="bottom-strip" id="contact">
+ 
+   <section class="bottom-strip" id="contact">
     <div class="container bottom-inner">
      
   

@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PrimeConstruct - Projektet</title>
-  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="project.css" >
+  <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
 
@@ -23,7 +26,6 @@
       <a href="index.php#home">Home</a>
       <a href="index.php#about">About</a>
       <a href="index.php#services">Services</a>
-      <a href="team.php">Team</a>
       <a href="index.php#contact">Contact</a>
       <a href="index.php#projects.html">Projects</a>
     </nav>
@@ -174,15 +176,26 @@
   </section>
   
 
-  <section class="bottom-strip" id="contact">
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>Ready to start your project?</h2>
+      <p>Contact us today and let’s build something great together.</p>
+      <a href="contact.php" class="cta-btn">Get in Touch</a>
+    </div>
+  </section>
+
+ 
+   <section class="bottom-strip" id="contact">
     <div class="container bottom-inner">
      
+  
       <div class="bottom-contact">
         <span>Tel: +383 XX XXX XXX</span>
         <span>Email: info@primeconstruct.com</span>
       </div>
     </div>
   </section>
+
 
  
   <footer class="site-footer">
@@ -192,8 +205,10 @@
     </div>
   </footer>
 
-  <script src="Slider.js"></script>
+    <script src="Slider.js"></script>
 </body>
 </html>
+
+
 
 
