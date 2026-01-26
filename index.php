@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+<h1>Mirë se erdhe <?php echo $_SESSION['username']; ?></h1>
+<a href="logout.php">Logout</a>
+
 <!DOCTYPE html>
 <html>
   <head>

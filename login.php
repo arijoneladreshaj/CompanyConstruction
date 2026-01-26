@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (isset($_SESSION['username'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,19 +33,19 @@
       <h2>Mirë se erdhe!</h2>
     
 
-      <form class="login-form">
+      <form class="login-form" method="POST" action="./loginValidate.php">
 
         <div class="form-group">
           <label>Email ose Username</label>
-          <input type="email" placeholder="Shkruaj emailin..." />
+          <input type="email" name="username" placeholder="Shkruaj emailin..." />
         </div>
 
         <div class="form-group">
           <label>Fjalëkalimi</label>
-          <input type="password" placeholder="Shkruaj fjalëkalimin..." />
+          <input type="password" name="password" placeholder="Shkruaj fjalëkalimin..." />
         </div>
 
-        <button type="submit" class="login-btn">Kyçu</button>
+        <button type="submit" name="loginBtn" class="login-btn">Kyçu</button>
 
         <p class="forgot"><a href="#">Ke harruar fjalëkalimin?</a></p>
         <p class="register-text">Nuk ke llogari? <a href="registerform.php">Krijo një të re</a></p>
