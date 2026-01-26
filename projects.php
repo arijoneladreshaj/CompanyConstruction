@@ -27,7 +27,7 @@
       <a href="index.php#about">About</a>
       <a href="index.php#services">Services</a>
       <a href="index.php#contact">Contact</a>
-      <a href="index.php#projects.html">Projects</a>
+      <a href="index.php#projects.php">Projects</a>
     </nav>
         </div>
       </header>

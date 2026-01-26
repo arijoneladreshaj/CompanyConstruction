@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/;
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault();
     let isValid = true;
 
     const email = form.elements[0]; 
@@ -54,9 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     
-    if (isValid) {
-      window.location.href = "projects.html";
-    }
+    if (!isValid) e.preventDefault();
   });
 
   

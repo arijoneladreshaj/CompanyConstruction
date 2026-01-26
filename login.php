@@ -33,7 +33,7 @@ if (isset($_SESSION['username'])) {
       <h2>Mirë se erdhe!</h2>
     
 
-      <form class="login-form" method="POST" action="./loginValidate.php">
+      <form class="login-form" method="POST" action="loginValidate.php">
 
         <div class="form-group">
           <label>Email ose Username</label>
@@ -43,6 +43,10 @@ if (isset($_SESSION['username'])) {
         <div class="form-group">
           <label>Fjalëkalimi</label>
           <input type="password" name="password" placeholder="Shkruaj fjalëkalimin..." />
+<?php if (isset($_GET['error']) && $_GET['error'] === 'wrong'): ?>
+  <p class="inline-error">Email/Username ose fjalëkalimi është gabim.</p>
+<?php endif; ?>
+
         </div>
 
         <button type="submit" name="loginBtn" class="login-btn">Kyçu</button>

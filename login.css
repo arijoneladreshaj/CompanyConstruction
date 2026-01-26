@@ -112,3 +112,10 @@
     color: #facc15;
     text-decoration: none;
 }
+
+/*mesazhi per ValidiminPHP*/
+.inline-error {
+  color: red;
+  font-size: 13px;
+  margin-top: 6px;
+}

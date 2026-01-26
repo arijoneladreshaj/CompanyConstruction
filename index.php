@@ -7,9 +7,6 @@ if (!isset($_SESSION['username'])) {
 }
 ?>
 
-<h1>Mirë se erdhe <?php echo $_SESSION['username']; ?></h1>
-<a href="logout.php">Logout</a>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -62,11 +59,10 @@ if (!isset($_SESSION['username'])) {
    <div class="project-access-box">
   <h2>Shiko projektet tona të fundit</h2>
   <p>
-    Për të vazhduar dhe për të parë projektet e PrimeConstruct,
-    <strong>ju lutem kyçuni në llogarinë tuaj.</strong>
+    Ju ftojmë të vazhdoni për të zbuluar projektet e <strong>PrimeConstruct.</strong>
   </p>
   <div class="access-buttons">
-  <a href="login.php" class="btn-access-yellow">Kyçu për të vazhduar</a>
+  <a href="logout.php" class="btn-access-yellow">Shkyçu për të dalë</a>
   <a href="#reviews" class="btn-access-black">Reviews</a>
 </div>
    </div>

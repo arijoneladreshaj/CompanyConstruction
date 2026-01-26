@@ -21,9 +21,12 @@ if (isset($_POST['loginBtn'])) {
         header("Location: index.php");
         exit();
 
+    
     } else {
-        echo "Username or Password is incorrect!";
-        exit();
-    }
+    header("Location: login.php?error=wrong");
+    exit();
 }
+}
+
+
 ?>
