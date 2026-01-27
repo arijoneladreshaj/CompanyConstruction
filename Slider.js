@@ -1,9 +1,9 @@
 var i = 0;
 var imgArray = [
-  "IMG_6348.jpeg",
-  "IMG_6352.jpeg",
-  "IMG_6350.jpeg",
-  "IMG_6353.jpeg",
+  "1.jpeg",
+  "2.jpeg",
+  "3.jpeg",
+  "4.jpeg",
   "center.jpg"
   
 ];
