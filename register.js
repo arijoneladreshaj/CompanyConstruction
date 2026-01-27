@@ -103,8 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isValid) {
-       window.location.href ="login.html";
-    }
+  form.submit(); 
+}
+
   });
 
   Array.from(form.elements).forEach(el => {

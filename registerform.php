@@ -1,3 +1,19 @@
+<?php
+require_once 'Database.php';
+require_once 'User.php';
+
+$db = new Database();
+$conn = $db->getConnection();
+
+$user = new User($conn);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $user->register($_POST['name'], $_POST['email'], $_POST['password']);
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
