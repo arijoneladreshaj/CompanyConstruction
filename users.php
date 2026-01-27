@@ -7,7 +7,7 @@ class User {
         $this->conn = $db;
     }
 
-    public function register($name, $email, $password) {
+    public function register(  $name, $email, $password) {
         $query = "INSERT INTO {$this->table_name} 
                   (name, email, password, role)
                   VALUES (:name, :email, :password, 'user')";
