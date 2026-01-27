@@ -1,12 +1,34 @@
 <?php
 session_start();
+require_once 'Database.php';
+require_once 'User.php';
 
-if (isset($_SESSION['username'])) {
-    header("Location: index.php");
-    exit();
+$db = new Database();
+$conn = $db->getConnection();
+
+$user = new User($conn);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $userData = $user->login($email, $password);
+
+    if ($userData) {
+        $_SESSION['user_id'] = $userData['id'];
+        $_SESSION['role']    = $userData['role'];
+
+        if ($userData['role'] === 'admin') {
+            header("Location: dashboard.php");
+        } else {
+            header("Location: index.php");
+        }
+        exit;
+    } else {
+        $error = "Email ose password gabim";
+    }
 }
 ?>
-
 
 
 <!DOCTYPE html>
