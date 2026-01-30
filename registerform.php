@@ -35,10 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <h2>Regjistrohu!</h2>
 
-  <form class="form-grid" novalidate>
+  <form class="form-grid" method="POST" action="registerform.php" novalidate>
   <div class="form-group">
     <label>Emri i plotë:</label>
-    <input type="text" name="fullname" placeholder="FilanFisteku">
+    <input type="text" name="name" placeholder="FilanFisteku">
   </div>
 
 <div class="form-group">

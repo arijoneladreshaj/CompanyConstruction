@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PrimeConstruct - Team</title>
   <link rel="stylesheet" href="project.css" />
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -178,7 +179,7 @@
     <div class="container cta-inner">
       <h2>Ready to start your project?</h2>
       <p>Contact us today and let’s build something great together.</p>
-      <a href="contact.html" class="cta-btn">Get in Touch</a>
+      <a href="contact.php" class="cta-btn">Get in Touch</a>
     </div>
   </section>
 

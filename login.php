@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['role']    = $userData['role'];
 
         if ($userData['role'] === 'admin') {
-            header("Location: dashboard.php");
+            header("Location: index.php");
         } else {
             header("Location: index.php");
         }
@@ -55,11 +55,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <h2>Mirë se erdhe!</h2>
     
 
-      <form class="login-form" method="POST" action="loginValidate.php">
+      <form class="login-form" method="POST" action="">
 
         <div class="form-group">
           <label>Email ose Username</label>
-          <input type="email" name="username" placeholder="Shkruaj emailin..." />
+          <input type="email" name="email" placeholder="Shkruaj emailin..." />
         </div>
 
         <div class="form-group">
