@@ -1,3 +1,11 @@
+<?php
+session_start();
+include_once 'ProjectRepository.php';
+$repo=new ProjectRepository();
+$dbProjects=$repo->getAllProjects();
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,12 +78,16 @@
           <h2>Projektet</h2>
           <p>Projektet kryesore të realizuara nga PrimeConstruct.</p>
         </div>
+        <div class="projectsbuttons">
         <a class="projects-all" href="#">Shiko të gjitha</a>
+        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+      <a class=" projects-all adminconfig" href="Dashboard.php">Konfiguro</a>
+    <?php endif; ?>
       </div>
-
+</div>
       <div class="grid">
 
-      
+      <!--
         <article class="card">
           <img src="complex.jpg" alt="Kompleksi Banesor Verona">
           <div class="card-body">
@@ -106,7 +118,7 @@
 
           </div>
         </article>
-
+        -->
     
        <article class="card">
   <div class="slider">
@@ -141,7 +153,7 @@
   </div>
 </article>
 
-
+        <!--
         <article class="card">
           <img src="factory.jpg" alt="TechPlant">
           <div class="card-body">
@@ -170,7 +182,35 @@
 
           </div>
         </article>
+        -->
+        <?php foreach($dbProjects as $p): ?>
+<article class="card">
+<img src="<?= htmlspecialchars($p['image']) ?>" alt="">
 
+<div class="card-body">
+<h3><?= htmlspecialchars($p['title']) ?></h3>
+<p class="loc"><?= htmlspecialchars($p['location']) ?></p>
+<p class="short"><?= htmlspecialchars($p['description']) ?></p>
+
+<div class="meta-row">
+<?php if(!empty($p['size'])): ?><span class="pill"><?= htmlspecialchars($p['size']) ?></span><?php endif; ?>
+<?php if(!empty($p['type'])): ?><span class="pill"><?= htmlspecialchars($p['type']) ?></span><?php endif; ?>
+<?php if($p['price']!==''): ?><span class="price">€<?= number_format((float)$p['price'],0,',','.') ?></span><?php endif; ?>
+</div>
+
+<div class="details">
+<span class="details-title">Detaje</span>
+<p><?= htmlspecialchars($p['description']) ?></p>
+
+<div class="actions">
+<a href="<?= !empty($p['link']) ? htmlspecialchars($p['link']) : '#' ?>" class="btn1">Kërko ofertë</a>
+<a href="#" class="btn2">Reviews</a>
+</div>
+</div>
+
+</div>
+</article>
+<?php endforeach; ?>
       </div>
     </div>
   </section>

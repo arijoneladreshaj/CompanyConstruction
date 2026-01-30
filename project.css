@@ -493,3 +493,24 @@ body{
   height: 220px;
   object-fit: cover;
 }
+
+/*css i butonave te Adminit*/
+.projectsbuttons{
+  display:flex;
+  align-items:center;
+  gap:30px;         
+}
+
+
+.adminconfig{
+  color:#ffb400;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+}
+
+.adminconfig:hover{
+  text-decoration: underline;  
+}
+
+
