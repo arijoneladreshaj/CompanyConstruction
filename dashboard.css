@@ -1,0 +1,118 @@
+body
+{padding-top:72px;}
+.dashboard-section{
+    background:#061923;
+    padding:26px 0 80px;
+    min-height:calc(100vh - 72px);
+}
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:16px;color:#fff;
+    margin-bottom:18px;
+}
+.dashboard-header h2{
+    margin:0;
+    font-size:22px;
+    font-weight:900;
+}
+.dashboard-header p{
+    margin:4px 0 0;
+    font-size:13px;
+    color:#93a4b8;
+}
+.add-btn{
+    background:#ffb400;
+    border:none;
+    border-radius:14px;
+    padding:10px 18px;
+    font-weight:900;
+    color:#111;
+    cursor:pointer;
+    text-decoration:none;
+    transition:.2s;
+    box-shadow:0 8px 18px rgba(255,180,0,.35);
+    white-space:nowrap;
+}
+.add-btn:hover{
+    background:#e0a000;
+    transform:translateY(-1px);
+}
+.table-card{
+    background:#ffffff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+.table-wrap{
+    overflow:auto;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:980px;
+}
+thead th{
+    background:#0b0b0b;
+    color:#fff;
+    padding:14px 16px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+tbody td{
+    padding:14px 16px;
+    font-size:14px;
+    color:#1b2430;
+    border-bottom:1px solid #eceff4;
+    vertical-align:middle;
+}
+tbody tr:hover td{
+    background:#fff8e6;
+}
+.thumb{
+    width:72px;
+    height:46px;
+    object-fit:cover;
+    border-radius:10px;
+    order: 1px solid #eef2f7;
+    display:block;
+}
+.price-tag{
+    display:inline-block;
+    border:1px solid #ffb400;
+    color:#ffb400;
+    border-radius:999px;
+    padding:6px 10px;
+    font-size:12px;
+    font-weight:900;
+    white-space:nowrap;
+}
+.status-tag{
+    display:inline-block;
+    background:#f3f6fb;
+    border-radius:999px;
+    padding:6px 10px;
+    font-size:12px;
+    font-weight:900;
+    color:#18232f;
+}
+.action a{
+    text-decoration:none;
+    font-weight:900;
+    font-size:13px;
+    margin-right:10px;
+}
+.edit{
+    color:#ffb400;
+}
+.delete{
+    color:#ff4d4f;
+}
+.empty{
+    padding:16px;
+    background:#fff;
+    color:#5a6472;
+}
