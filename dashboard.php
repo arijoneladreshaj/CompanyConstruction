@@ -80,7 +80,7 @@ $projects = $repo->getAllProjects();
 <td><?php if($p['price']!=='') echo "€".number_format((float)$p['price'],0,',','.'); ?></td>
 <td><?= htmlspecialchars($p['status']) ?></td>
 <td class="action"><a class="edit" href="editProject.php?id=<?= $p['id'] ?>">Edit</a></td>
-<td class="action"><a class="delete" href="dashboard.php?delete=<?= $p['id'] ?>" onclick="return confirm('A je i sigurt?')">Delete</a></td>
+<td class="action"><a class="delete" href="delete.php?id=<?= $p['id'] ?>" onclick="return confirm('A je i sigurt?')">Delete</a></td>
 </tr>
 <?php endforeach; ?>
 
