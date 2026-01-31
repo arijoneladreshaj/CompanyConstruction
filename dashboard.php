@@ -48,6 +48,7 @@ $projects = $repo->getAllProjects();
 <div>
 <h2>Projects Dashboard
      <a href="activity.php" class="activity-link">Activity</a>
+      <a href="messages.php" class="activity-link">Messages</a>
 </h2>
 
 <p>Menaxho projektet (Add / Edit / Delete)</p>

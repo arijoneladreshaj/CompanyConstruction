@@ -21,4 +21,17 @@ class ContactRepository {
             ':message' => $message
         ]);
     }
+public function getAllMessages() {
+        $sql = "SELECT * FROM contact_messages ORDER BY created_at DESC";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+   
+    public function deleteMessage($id) {
+        $sql = "DELETE FROM contact_messages WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        return $stmt->execute([':id' => $id]);
+    }
 }
