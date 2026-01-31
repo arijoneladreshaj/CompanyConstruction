@@ -829,7 +829,6 @@ button.btn-access-yellow{
   cursor:pointer;
   appearance:none;
 }
-<<<<<<< Updated upstream
 .success-message-center {
   width: fit-content;
   margin: 20px auto 30px auto;
@@ -843,7 +842,6 @@ button.btn-access-yellow{
   opacity: 1;
   transition: opacity 1.5s ease;
 }
-=======
 .about-edit-link {
   font-size: 12px;
   color: #999;
@@ -857,6 +855,5 @@ button.btn-access-yellow{
   border-color: #000;
 }
 
->>>>>>> Stashed changes
 
 
