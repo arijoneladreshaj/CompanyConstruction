@@ -43,6 +43,9 @@ if (!isset($_SESSION['user_id'])) {
             <a href="#services">Services</a>
             <a href="contact.php">Contact</a>
             <a href="projects.php">Projects</a>
+            <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+            <a href="dashboard.php">Dashboard</a>
+<?php endif; ?>
           </nav>
         </div>
       </header>
