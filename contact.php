@@ -1,3 +1,23 @@
+<?php
+require_once 'ContactRepository.php';
+
+$success = false;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['name'])) {
+
+    $name    = trim($_POST['name']);
+    $email   = trim($_POST['email']);
+    $subject = trim($_POST['subject'] ?? '');
+    $message = trim($_POST['message']);
+
+    if ($name !== '' && $email !== '' && $message !== '') {
+        $repo = new ContactRepository();
+        $repo->insertMessage($name, $email, $subject, $message);
+        $success = true; 
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,19 +61,25 @@
     <p class="contact-subtitle">
       Tell us about your project and we’ll get back to you as soon as possible.
     </p>
+    
+    <?php if ($success): ?>
+  <div id="success-message" class="success-message-center">
+    Mesazhi u dërgua me sukses!
+  </div>
+<?php endif; ?>
 
-    <form class="contact-form">
+    <form class="contact-form" action="contact.php" method="POST">
       <div class="form-row">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
+        <input type="text" name = "name" placeholder="Your Name" required>
+        <input type="email" name ="email" placeholder="Your Email" required>
       </div>
 
       <div class="form-row">
-        <input type="text" placeholder="Subject">
+        <input type="text" name="subject" placeholder="Subject">
       </div>
 
       <div class="form-row">
-        <textarea rows="6" placeholder="Your Message" required></textarea>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
       </div>
 
       <button type="submit" class="btn-access-yellow">
@@ -83,5 +109,15 @@
     
     </div>
   </footer>
+  <script>
+  setTimeout(() => {
+    const msg = document.getElementById('success-message');
+    if (msg) {
+      msg.style.opacity = '0'; 
+      setTimeout(() => msg.remove(), 1500); 
+    }
+  }, 3000); 
+</script>
+
 </body>
 </html>
