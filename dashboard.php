@@ -24,7 +24,7 @@ $projects = $repo->getAllProjects();
 <header class="site-header">
 <div class="container header-inner">
 <a class="logo" href="../index.php">
-<img src="../assets/logo.png" alt="">
+<img src="Logoo.png" alt="">
 <span class="logo-text">
 <span class="logo-title">PRIMECONSTRUCT</span>
 <span class="logo-subtitle">Construction Company</span>
@@ -46,7 +46,10 @@ $projects = $repo->getAllProjects();
 <div class="container">
 <div class="dashboard-header">
 <div>
-<h2>Projects Dashboard</h2>
+<h2>Projects Dashboard
+     <a href="activity.php" class="activity-link">Activity</a>
+</h2>
+
 <p>Menaxho projektet (Add / Edit / Delete)</p>
 </div>
 <a class="add-btn" href="addProject.php">+ Add Project</a>
