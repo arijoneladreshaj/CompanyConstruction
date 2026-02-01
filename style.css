@@ -843,16 +843,16 @@ button.btn-access-yellow{
   transition: opacity 1.5s ease;
 }
 .about-edit-link {
-  font-size: 12px;
-  color: #999;
+  font-size: 15px;
+  color:#f4b400;
   margin-left: 10px;
   text-decoration: none;
-  border-bottom: 1px dashed #999;
+  border-bottom: 1px dashed #f4b400;
 }
 
 .about-edit-link:hover {
-  color: #000;
-  border-color: #000;
+  color: #d89b00;
+  border-color: #d89b00;
 }
 
 
