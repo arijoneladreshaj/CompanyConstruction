@@ -1,5 +1,22 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+require_once 'aboutRepository.php';
+require_once 'statsRepository.php';
+
+$aboutRepo = new AboutRepository();
+$statsRepo = new StatsRepository();
+
+$a = $aboutRepo->getAboutById(1);
+$stats = $statsRepo->getAllStats();
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>About Us | PrimeConstruct</title>
@@ -26,6 +43,9 @@
       <a href="index.php#services">Services</a>
       <a href="index.php#contact">Contact</a>
       <a href="projects.php">Projects</a>
+                  <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+            <a href="dashboard.php">Dashboard</a>
+<?php endif; ?>
     </nav>
 
   </div>
@@ -33,7 +53,7 @@
 
 
 
-  <section class="about-block" id="about">
+  <!--<section class="about-block" id="about">
     <div class="container about-inner">
 
       <div class="about-image">
@@ -56,6 +76,27 @@
           Ne besojmë në komunikim të hapur me investitorët, dokumentacion të
           qartë teknik dhe respektim të rreptë të parametrave të sigurisë.
         </p>
+                  -->
+        <section class="about-block" id="about">
+  <div class="container about-inner">
+
+    <div class="about-image">
+      <img src="<?= $a['img'] ?>" alt="PrimeConstruct" />
+    </div>
+
+    <div class="about-text">
+      <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+  <a href="editAbout.php" class="about-edit-link"> Edit</a>
+<?php endif; ?>
+
+      <p class="since-label">Since <?= $a['year'] ?></p>
+
+      <h2><?= $a['title'] ?></h2>
+
+      <p><?= nl2br($a['text1']) ?></p>
+
+      <p><?= nl2br($a['text2']) ?></p>
+
 
         <div class="team">
           <p>
@@ -67,7 +108,7 @@
       </div>
     </div>
   </section>
-
+<!--
   <section class="stats">
     <div class="container stats-inner">
       <div class="stat-box">
@@ -88,6 +129,17 @@
       </div>
     </div>
   </section>
+                  -->
+  <section class="stats">
+  <div class="container stats-inner">
+    <?php foreach ($stats as $r): ?>
+      <div class="stat-box">
+        <h3><?= $r['nr'] ?></h3>
+        <p><?= $r['txt'] ?></p>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</section>
 
   <section class="why-us">
     <div class="container">
