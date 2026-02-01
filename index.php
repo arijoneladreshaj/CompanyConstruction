@@ -5,6 +5,11 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
+require_once 'HomeRepository.php';
+
+$homeRepo = new HomeRepository();
+$home = $homeRepo->getHome();
+
 ?>
 
 <!DOCTYPE html>
@@ -52,10 +57,19 @@ if (!isset($_SESSION['user_id'])) {
 
       <div class="container hero-content">
         <div class="hero-text-side">
-          <h1>BUILD YOUR DREAM.</h1>
+          <!--<h1>BUILD YOUR DREAM.</h1>-->
+           <div class="editable-wrap">
+      <h1><?= htmlspecialchars($home['hero_title']) ?></h1>
+      <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+        <a href="editHome.php#hero" class="about-edit-link">Edit</a>
+      <?php endif; ?>
+    </div>
+
           <p class="hero-sub">
-            PrimeConstruct ofron zgjidhje të plota ndërtimi – nga ideja fillestare,
-            projektimi inxhinierik, deri te realizimi në kantier.
+           <?= nl2br(htmlspecialchars($home['hero_text'])) ?>
+
+           <!-- PrimeConstruct ofron zgjidhje të plota ndërtimi – nga ideja fillestare,
+            projektimi inxhinierik, deri te realizimi në kantier.-->
           </p>
         </div>
 
@@ -81,13 +95,16 @@ if (!isset($_SESSION['user_id'])) {
       <h2 class="offer-title">ÇFARË OFROJMË</h2>
       <span class="offer-underline"></span>
 
-      <p>
-        Ne ofrojmë zgjidhje profesionale ndërtimi të projektuar për të plotësuar
+      <p> 
+  <?= nl2br(htmlspecialchars($home['services_intro'])) ?>
+
+
+        <!--Ne ofrojmë zgjidhje profesionale ndërtimi të projektuar për të plotësuar
         standardet më të larta të cilësisë, sigurisë dhe efikasitetit.
       </p>
       <p>
         Me eksperiencë shumëvjeçare në industrinë e ndërtimit, ne mundësojmë
-        menaxhim të plotë të projekteve, nga planifikimi deri te dorëzimi final.
+        menaxhim të plotë të projekteve, nga planifikimi deri te dorëzimi final.-->
       </p>
 
       <a href="" class="btn-offer-readmore">Më shumë</a>
@@ -205,7 +222,11 @@ if (!isset($_SESSION['user_id'])) {
 
   <section class="cta">
     <div class="container cta-inner">
-      <h2>Ready to start your project?</h2>
+      <!--<h2>Ready to start your project?</h2>-->
+      <h2>
+  <?= nl2br(htmlspecialchars($home['cta_text'])) ?>
+</h2>
+
       <p>Contact us today and let’s build something great together.</p>
       <a href="contact.php" class="cta-btn">Get in Touch</a>
     </div>
