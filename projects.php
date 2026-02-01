@@ -22,7 +22,7 @@ $dbProjects=$repo->getAllProjects();
 <header class="site-header">
   <div class="container header-inner">
 
-    <a href="#home" class="logo">
+    <a href="index.php" class="logo">
       <img src="Logoo.png" alt="Prime Construction">
       <div class="logo-text">
         <span class="logo-title">PrimeConstruct</span>
@@ -32,10 +32,10 @@ $dbProjects=$repo->getAllProjects();
 
     <nav class="main-nav">
       <a href="index.php#home">Home</a>
-      <a href="index.php#about">About</a>
+      <a href="about.php">About</a>
       <a href="index.php#services">Services</a>
-      <a href="index.php#contact">Contact</a>
-      <a href="index.php#projects.php">Projects</a>
+      <a href="contact.php">Contact</a>
+      <a href="projects.php">Projects</a>
     </nav>
         </div>
       </header>

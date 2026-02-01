@@ -27,7 +27,7 @@ $stats = $statsRepo->getAllStats();
 <header class="site-header">
   <div class="container header-inner">
 
-    <a href="index.html" class="logo1">
+    <a href="index.php" class="logo1">
       <div class="logo">
         <img src="Logoo.png" alt="PrimeConstruct">
         <div class="logo-text">

@@ -4,15 +4,29 @@ require_once 'User.php';
 
 $db = new Database();
 $conn = $db->getConnection();
-
 $user = new User($conn);
 
+$message = "";
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $user->register($_POST['name'], $_POST['email'], $_POST['password']);
-    header("Location: login.php");
-    exit;
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $result = $user->register($name, $email, $password);
+
+    if ($result === "EMAIL_EXISTS") {
+        $message = " Ky email është tashmë i regjistruar!";
+    } elseif ($result === true) {
+        header("Location: login.php");
+        exit;
+    } else {
+        $message = " Gabim gjatë regjistrimit!";
+    }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html>

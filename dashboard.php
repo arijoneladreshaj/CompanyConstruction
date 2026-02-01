@@ -34,7 +34,7 @@ $projects = $repo->getAllProjects();
 <nav class="main-nav">
 <a href="index.php">Home</a>
 <a href="about.php">About</a>
-<a href="services.php">Services</a>
+<a href="index.php#contact">Services</a>
 <a href="contact.php">Contact</a>
 <a href="projects.php">Projects</a>
 <a class="active" href="dashboard.php">Dashboard</a>
